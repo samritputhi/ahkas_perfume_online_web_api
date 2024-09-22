@@ -32,7 +32,7 @@ class UserRegisterController
 
         $token = $user->createToken($request->device_name)->plainTextToken;
 
-        $this->sentTelegram($user);
+        // $this->sentTelegram($user);
 
         return response()->json(['token' => $token], 201);
     }
